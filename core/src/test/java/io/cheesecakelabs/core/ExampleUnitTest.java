@@ -1,4 +1,4 @@
-package io.cheesecakelabs.cheesecakecore;
+package io.cheesecakelabs.core;
 
 import org.junit.Test;
 

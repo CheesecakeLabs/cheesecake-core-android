@@ -1,4 +1,4 @@
-package io.cheesecakelabs.cheesecakecore.utils.extensions
+package io.cheesecakelabs.core.utils.extensions
 
 import android.view.View
 
