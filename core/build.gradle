@@ -1,8 +1,9 @@
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.CheesecakeLabs.cheesecake-core-android'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.CheesecakeLabs.cheesecake-core-android'
 
 android {
     compileSdkVersion 28
