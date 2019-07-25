@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cheesecake-core-android.iml" filepath="$PROJECT_DIR$/.idea/cheesecake-core-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/cheesecake-core-android.iml" filepath="$PROJECT_DIR$/cheesecake-core-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/cheesecakecore/cheesecakecore.iml" filepath="$PROJECT_DIR$/cheesecakecore/cheesecakecore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
     </modules>
   </component>
 </project>

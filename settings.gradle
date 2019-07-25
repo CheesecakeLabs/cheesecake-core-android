@@ -1,1 +1,1 @@
-include ':app', ':cheesecakecore'
+include ':app', ':core'

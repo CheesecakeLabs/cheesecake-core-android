@@ -1,4 +1,4 @@
-package io.cheesecakelabs.cheesecakecore;
+package io.cheesecakelabs.core;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("io.cheesecakelabs.cheesecakecore.test", appContext.getPackageName());
+        assertEquals("io.cheesecakelabs.core.test", appContext.getPackageName());
     }
 }
