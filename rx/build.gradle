@@ -5,8 +5,7 @@ group = 'com.github.CheesecakeLabs.cheesecake-core-android'
 
 android {
     compileSdkVersion 28
-
-
+    
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 28
