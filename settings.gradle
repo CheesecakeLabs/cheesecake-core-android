@@ -1,1 +1,1 @@
-include ':app', ':core', ':retrofit'
+include ':app', ':core', ':retrofit', ':rx'
