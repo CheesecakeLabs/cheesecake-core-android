@@ -4,24 +4,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 
-fun EditText.maskCPF() {
-    mask("###.###.###-##")
-}
-
-fun EditText.maskCEP() {
-    mask("#####-###")
-}
-
-fun EditText.maskCreditCard() {
-    mask("#### #### #### ####")
-}
-
-fun EditText.maskCellPhone(hasCountryCode: Boolean) {
-    if (hasCountryCode) mask("+## (##) #########")
-    else mask("(##) #########")
-}
-
-fun EditText.mask(pattern: String) {
+fun EditText.mask(pattern: String, filter: Regex) {
     this.addTextChangedListener(object : TextWatcher {
         var isUpdating: Boolean = false
         var previousString: String = ""
@@ -31,7 +14,7 @@ fun EditText.mask(pattern: String) {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            val str = s.toString().replace("[./() \\-+]".toRegex(), "")
+            val str = s.toString().replace(filter, "")
             var stringWithMask = ""
 
             if (count == 0) isUpdating = true
@@ -43,7 +26,7 @@ fun EditText.mask(pattern: String) {
             }
 
             var i = 0
-            run loop@{
+            run loop@ {
                 pattern.toCharArray().forEach {
                     if (it != '#' && str.length > previousString.length) {
                         stringWithMask += it
