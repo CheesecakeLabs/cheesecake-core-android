@@ -4,9 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cheesecake-core-android.iml" filepath="$PROJECT_DIR$/.idea/cheesecake-core-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cheesecake-core-android.iml" filepath="$PROJECT_DIR$/cheesecake-core-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rx/cheesecake-core-android-rx.iml" filepath="$PROJECT_DIR$/rx/cheesecake-core-android-rx.iml" />
       <module fileurl="file://$PROJECT_DIR$/cheesecakecore/cheesecakecore.iml" filepath="$PROJECT_DIR$/cheesecakecore/cheesecakecore.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/floatingactionmenu/floatingactionmenu.iml" filepath="$PROJECT_DIR$/floatingactionmenu/floatingactionmenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/retrofit/retrofit.iml" filepath="$PROJECT_DIR$/retrofit/retrofit.iml" />
       <module fileurl="file://$PROJECT_DIR$/rx/rx.iml" filepath="$PROJECT_DIR$/rx/rx.iml" />
     </modules>
