@@ -5,7 +5,7 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import java.io.File
 
 fun Context.getColor(resourceId: Int): Int {
