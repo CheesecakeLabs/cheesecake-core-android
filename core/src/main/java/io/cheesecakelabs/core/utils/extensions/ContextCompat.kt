@@ -8,7 +8,7 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import java.io.File
 
-fun Context.getColor(resourceId: Int): Int {
+fun Context.getContextCompatColor(resourceId: Int): Int {
     return ContextCompat.getColor(this, resourceId)
 }
 
@@ -20,7 +20,7 @@ fun Context.getDataDir(): File? {
     return ContextCompat.getDataDir(this)
 }
 
-fun Context.getDrawable(resourceId: Int): Drawable? {
+fun Context.getContextCompatDrawable(resourceId: Int): Drawable? {
     return ContextCompat.getDrawable(this, resourceId)
 }
 
