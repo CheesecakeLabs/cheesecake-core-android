@@ -11,6 +11,7 @@ import io.cheesecakelabs.core.utils.extensions.visible
 import io.cheesecakelabs.core.utils.helpers.DimensionsHelper
 import io.cheesecakelabs.floatingactionmenu.R
 import io.cheesecakelabs.floatingactionmenu.utils.extensions.setColors
+import io.cheesecakelabs.floatingactionmenu.utils.extensions.setForegroundDrawable
 import io.cheesecakelabs.floatingactionmenu.utils.extensions.setupListener
 import io.cheesecakelabs.floatingactionmenu.utils.listeners.FloatingActionMenuListener
 import kotlinx.android.synthetic.main.fab_menu_button.view.*
@@ -121,7 +122,7 @@ open class FloatingActionMenuView @JvmOverloads constructor(
         val floatBtn = view.findViewById<FloatingActionButton>(R.id.menuFloatingButton)
 
         floatBtn?.run {
-            foreground = context.getContextCompatDrawable(drawableOnMenuCollapsed)
+            setForegroundDrawable(context.getContextCompatDrawable(drawableOnMenuCollapsed))
             setOnClickListener { onFabMenuButtonClicked() }
         }
 
@@ -150,7 +151,7 @@ open class FloatingActionMenuView @JvmOverloads constructor(
                 view.findViewById<FloatingActionButton>(R.id.menuItemFloatingButton)
 
             floatBtn?.run {
-                foreground = context.getContextCompatDrawable(floatingMenuItem.drawable)
+                setForegroundDrawable(context.getContextCompatDrawable(floatingMenuItem.drawable))
                 floatingButtons.add(this)
                 setOnClickListener { listener?.onMenuItemClicked(floatingMenuItem.position) }
             }
@@ -176,8 +177,9 @@ open class FloatingActionMenuView @JvmOverloads constructor(
                 viewPropertyAnimator.setupListener(
                     onAnimationStart = {
                         listener?.onMenuExpanded()
-                        menuFloatingButton.foreground =
+                        menuFloatingButton.setForegroundDrawable(
                             context.getContextCompatDrawable(drawableOnMenuExpanded)
+                        )
                     },
                     onAnimationEnd = { isAnimating = false }
                 )
@@ -192,9 +194,9 @@ open class FloatingActionMenuView @JvmOverloads constructor(
             if (fab == floatingButtons.last()) {
                 viewPropertyAnimator.setupListener(
                     onAnimationStart = {
-                        menuFloatingButton.foreground =
+                        menuFloatingButton.setForegroundDrawable(
                             context.getContextCompatDrawable(drawableOnMenuCollapsed)
-
+                        )
                     },
                     onAnimationEnd = {
                         listener?.onMenuCollapsed()

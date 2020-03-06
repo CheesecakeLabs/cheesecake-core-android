@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="FloatingActionMenuView">
-        <attr name="drawableOnMenuCollapsed" format="reference|string"/>
-        <attr name="drawableOnMenuExpanded" format="reference|string"/>
-        <attr name="distanceBetweenItems" format="dimension|string"/>
-        <attr name="foregroundColorDefault" format="reference|string"/>
-        <attr name="backgroundColorDefault" format="reference|string"/>
-        <attr name="foregroundColorHighlight" format="reference|string"/>
-        <attr name="backgroundColorHighlight" format="reference|string"/>
+        <attr name="drawableOnMenuCollapsed" format="reference"/>
+        <attr name="drawableOnMenuExpanded" format="reference"/>
+        <attr name="distanceBetweenItems" format="dimension"/>
+        <attr name="foregroundColorDefault" format="reference"/>
+        <attr name="backgroundColorDefault" format="reference"/>
+        <attr name="foregroundColorHighlight" format="reference"/>
+        <attr name="backgroundColorHighlight" format="reference"/>
     </declare-styleable>
 </resources>
