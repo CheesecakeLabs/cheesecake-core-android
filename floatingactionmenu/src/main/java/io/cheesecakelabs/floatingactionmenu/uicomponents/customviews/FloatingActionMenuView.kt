@@ -97,24 +97,24 @@ open class FloatingActionMenuView @JvmOverloads constructor(
         onMenuItemsSet(floatingMenuItems)
     }
 
-    fun setColorDefault() {
-        menuFloatingButton.setColors(context, backgroundColorDefault, foregroundColorDefault)
-
-        floatingButtons.forEach { fab ->
-            fab.setColors(context, backgroundColorDefault, foregroundColorDefault)
-        }
-    }
-
-    fun setColorHighlight() {
-        menuFloatingButton.setColors(context, backgroundColorHighlight, foregroundColorHighlight)
-
-        floatingButtons.forEach { fab ->
-            fab.setColors(context, backgroundColorHighlight, foregroundColorHighlight)
+    fun setMenuColor(isHighlighted: Boolean = false){
+        if(isHighlighted){
+            setFabsColor(backgroundColorHighlight, foregroundColorHighlight)
+        } else {
+            setFabsColor(backgroundColorDefault, foregroundColorDefault)
         }
     }
 
     fun collapseMenu() {
         onFabMenuButtonClicked()
+    }
+
+    private fun setFabsColor(backgroundColor: Int, foregroundColor: Int){
+        menuFloatingButton.setColors(context, backgroundColor, foregroundColor)
+
+        floatingButtons.forEach { fab ->
+            fab.setColors(context, backgroundColor, foregroundColor)
+        }
     }
 
     private fun setupMenuButton() {
@@ -160,7 +160,7 @@ open class FloatingActionMenuView @JvmOverloads constructor(
         }
 
         menuFloatingButton.bringToFront()
-        setColorDefault()
+        setMenuColor()
     }
 
     private fun showFabMenu() {
