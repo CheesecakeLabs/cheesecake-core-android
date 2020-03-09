@@ -1,6 +1,6 @@
 ext {
     libraries = [
-            kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin",
 
             constraintLayout   : "androidx.constraintlayout:constraintlayout:1.1.3",
 
