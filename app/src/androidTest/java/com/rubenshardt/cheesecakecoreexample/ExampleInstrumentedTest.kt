@@ -4,6 +4,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 
 import org.junit.Test
 import org.junit.runner.RunWith
+import androidx.test.InstrumentationRegistry.getTargetContext
 
 import org.junit.Assert.*
 
@@ -17,7 +18,7 @@ class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
         // Context of the app under test.
-        val appContext = androidx.test.InstrumentationRegistry.getTargetContext()
+        val appContext = getTargetContext()
         assertEquals("com.rubenshardt.cheesecakecoreexample", appContext.packageName)
     }
 }

@@ -6,6 +6,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static androidx.test.InstrumentationRegistry.getTargetContext;
 import static org.junit.Assert.*;
 
 /**
@@ -18,7 +19,7 @@ public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() {
         // Context of the app under test.
-        Context appContext = androidx.test.InstrumentationRegistry.getTargetContext();
+        Context appContext = getTargetContext();
 
         assertEquals("io.cheesecakelabs.retrofit.test", appContext.getPackageName());
     }
