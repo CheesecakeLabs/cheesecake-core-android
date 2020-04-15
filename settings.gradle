@@ -1,1 +1,1 @@
-include ':app', ':core', ':retrofit', ':rx'
+include ':app', ':core', ':retrofit', ':rx', ':floatingactionmenu'
