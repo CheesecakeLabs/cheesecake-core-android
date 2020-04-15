@@ -1,19 +1,18 @@
 apply plugin: 'com.android.library'
-
-apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.CheesecakeLabs.cheesecake-core-android'
-
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
@@ -28,8 +27,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation libraries.kotlin
     implementation libraries.appCompat
-    implementation libraries.rxJava
+    implementation libraries.coreKtx
+    implementation libraries.coordinatorLayout
+    implementation libraries.materialComponents
+
+    api project(':core')
 
     testImplementation testLibraries.junit
     androidTestImplementation androidTestLibraries.extJunit
